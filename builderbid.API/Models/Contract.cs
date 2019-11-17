@@ -15,6 +15,6 @@ namespace builderbid.API.Models
         public DateTime EndDate { get; set; }
         public double StartingBid { get; set; }
         public double WinningBid { get; set; }
-        public ICollection<Photo> Photos { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
     }
 }
