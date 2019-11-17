@@ -1,0 +1,45 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top img-thumbnail" src="{{user?.photoUrl}}" alt="{{user.username}}">
+        <div class="card-body">
+          <div>
+            <strong>Company:</strong>
+            <p>{{user.company}}</p>
+          </div>
+          <div>
+            <strong>Contractor:</strong>
+            <p>{{user.username | titlecase}}</p>
+          </div>
+          <div>
+            <strong>Location:</strong>
+            <p>{{user.city}}, {{user.state}}</p>
+          </div>
+          <div class="card-footer">
+            <div class="btn-group d-flex">
+              <button class="btn btn-primary w-100">Message</button>
+              <button class="btn btn-info w-100">Add Favorites</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="tab-panel">
+        <tabset class="member-tabset">
+            <tab heading="About {{user.company}}">
+              <p>Company marketing material will go here.</p>
+            </tab>
+            <tab heading="Available Contracts">
+              <div class="container" >
+                <ul *ngFor="let item of contracts">
+                  <li>{{item.city}}</li>
+                </ul>
+              </div>
+            </tab>
+        </tabset>
+      </div>
+    </div>
+  </div>
+</div>
