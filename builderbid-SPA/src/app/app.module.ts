@@ -23,6 +23,8 @@ import { AuthGuard } from './_guards/auth.guard';
 import { UserService } from './services/user.service';
 import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
+import { AboutusComponent } from './aboutus/aboutus/aboutus.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 export function tokenGetter() {
@@ -40,7 +42,9 @@ export function tokenGetter() {
       ListsComponent,
       MessagesComponent,
       MemberCardComponent,
-      MemberDetailComponent
+      MemberDetailComponent,
+      AboutusComponent,
+      ContactComponent
    ],
    imports: [
       BrowserModule,

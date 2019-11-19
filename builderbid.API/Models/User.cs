@@ -12,9 +12,9 @@ namespace builderbid.API.Models
         public string City { get; set; }
         public string State { get; set; }
         public string ZipCode { get; set; }
-        public ICollection<Photo> Photos { get; set; }
-        public ICollection<Bid> Bids { get; set; }
-        public ICollection<Contract> Contracts { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
+        public virtual ICollection<Bid> Bids { get; set; }
+        public virtual ICollection<Contract> Contracts { get; set; }
         
     }
 }

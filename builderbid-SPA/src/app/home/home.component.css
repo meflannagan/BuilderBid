@@ -3,3 +3,19 @@ img {
     width: 100%;
     height: auto;
 }
+
+.carousel-caption {
+    background-color:rgba(179, 204, 255, 0.5);
+}
+
+h3, p {
+    color: black;
+}
+
+p {
+    font-size: .5cm;
+}
+
+h1 { 
+    text-align: center;
+}

@@ -1,36 +1,40 @@
 <carousel >
+  
     <slide>
       <img src="./assets/photoFour.jpg" alt="first slide" >
       <div class="carousel-caption d-none d-md-block">
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <h3>Bid to Build!</h3>
+        <p>Quality work for a Quality Bid</p>
       </div>
+      
     </slide>
     <slide>
-      <img src="./assets/photoFour.jpg" alt="second slide" >
+      <img src="./assets/photo1.jpg" alt="second slide" >
       <div class="carousel-caption d-none d-md-block">
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h3>Get Results</h3>
+        <p>Hire the best using open and closed auctions.</p>
       </div>
     </slide>
     <slide >
-      <img src="./assets/photoFour.jpg" alt="third slide" >
+      <img src="./assets/photo3.jpg" alt="third slide" >
       <div class="carousel-caption d-none d-md-block">
-        <h3>Third slide label</h3>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <h3>Be Empowered</h3>
+        <p>Build working relationships and find the contractors.</p>
       </div>
     </slide>
   </carousel>
 
 
-<div class="container mt-1 mb-2">
+<div class="container mt-1 mb-2 ">
   <div *ngIf="!registerMode" style="text-align: center">
-    <h1>Find the best contractors in town!</h1>
-    <p class="lead">Increase your productivity now... All you need to do is sign up!</p>
-    <div class="text-center">
+    <!-- <h1>Find the best contractors in town!</h1>
+    <p class="lead">Increase your productivity now... All you need to do is sign up!</p> -->
+    <div class="text-center mt-3" routerLinkActive="active">
       <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()" >Register</button>
-      <button class="btn btn-info btn-lg">Learn more</button>
+      <button class="btn btn-info btn-lg" [routerLink]="['/about']">Learn more</button>
     </div>
+    <h1 class="mt-4">Find the best contractors in town!</h1>
+    <p class="lead">Increase your productivity now... All you need to do is sign up!</p>
   </div>
 
   <div *ngIf="registerMode" class="container">
@@ -41,3 +45,6 @@
     </div>
   </div>
 </div>
+
+
+

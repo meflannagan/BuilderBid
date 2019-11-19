@@ -25,13 +25,13 @@ namespace builderbid.API.Data
 
         public async Task<User> GetUser(int id)
         {
-            var user = await this.context.Users.Include(p => p.Photos).FirstOrDefaultAsync(u =>u.Id == id);
+            var user = await this.context.Users.FirstOrDefaultAsync(u =>u.Id == id);
             return user;
         }
 
         public async Task<IEnumerable<User>> GetUsers()
         {
-            var users = await this.context.Users.Include(p => p.Photos).ToListAsync();
+            var users = await this.context.Users.ToListAsync();
             return users;
         }
 
